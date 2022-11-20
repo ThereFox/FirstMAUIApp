@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.StartPage"
+             Title="StartPage">
+    <FlexLayout
+        AlignItems="Center"
+        JustifyContent="SpaceAround"
+        Direction="Column"
+        BackgroundColor="#1b1c23"
+        Margin="0"
+        Padding="10"
+        >
+        <ContentView>
+            <Label>Jokes:</Label>
+        </ContentView>
+        <ContentView>
+            <FlexLayout
+                AlignItems="Stretch"
+                JustifyContent="Start"
+                Direction="Column"
+                x:Name="Container"
+            >
+            </FlexLayout>
+        </ContentView>
+        <ContentView>
+            <Button
+                ZIndex="0"
+                Text="ADD JOKE"
+                Clicked="GetNewJokesWithRerander"
+                IsEnabled="True"
+                TextColor="Red"
+                FontSize="22"
+                FontAttributes="Bold"
+                BorderColor="#29293a"
+                CornerRadius="10"
+                HeightRequest="75"
+                WidthRequest="100"
+                />
+        </ContentView>
+    </FlexLayout>
+</ContentPage>
