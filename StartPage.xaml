@@ -4,17 +4,24 @@
              x:Class="MauiApp2.StartPage"
              Title="StartPage">
     <FlexLayout
-        AlignItems="Center"
-        JustifyContent="SpaceAround"
+        JustifyContent="Center"
+        AlignItems="Stretch"
         Direction="Column"
         BackgroundColor="#1b1c23"
         Margin="0"
         Padding="10"
         >
-        <ContentView>
-            <Label>Jokes:</Label>
-        </ContentView>
-        <ContentView>
+        <ContentView
+            >
+            <FlexLayout
+            JustifyContent="Start"
+            AlignItems="Center"
+            Direction="Column"
+            >
+                <ContentView>
+                    <Label>Jokes:</Label>
+                </ContentView>
+                <ContentView>
             <FlexLayout
                 AlignItems="Stretch"
                 JustifyContent="Start"
@@ -23,7 +30,10 @@
             >
             </FlexLayout>
         </ContentView>
-        <ContentView>
+            </FlexLayout>
+        </ContentView>
+        <ContentView
+            Grid.RowSpan="20">
             <Button
                 ZIndex="0"
                 Text="ADD JOKE"

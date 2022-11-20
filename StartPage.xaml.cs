@@ -24,12 +24,16 @@ public partial class StartPage : ContentPage
 
 	private View createJokeComponent(string content)
 	{
-        return new ContentView()
-			{
-				Padding = new Thickness(20, 5, 20, 5),
-				Margin = new Thickness(5, 5, 5, 5),
-				BackgroundColor = Color.FromHex("b60aff"),
-				Content = new Label() { Text = content },
+		return new ContentView()
+		{
+			Margin = new Thickness(5, 2.5, 5, 2.5),
+			BackgroundColor = Color.FromHex("b60aff"),
+			Content = new Label()
+				{
+				HorizontalTextAlignment = TextAlignment.Center,
+				Text = content,
+				Margin = new Thickness(10, 10, 10, 10),
+				}
 			};
     }
 	private async Task randerJokes(int countOfJokes)
